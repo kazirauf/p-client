@@ -13,11 +13,11 @@ const AboutUs = () => {
      data-aos-easing="ease-in-sine"
      data-aos-duration="1000">
         <div className="hero ">
-          <div className="hero-content flex justify-center items-center gap-24 text-white">
+          <div className="hero-content flex lg:flex-row md:flex-row flex-col justify-center items-center gap-24 text-white">
             <Image  width={1000} height={1000} src={image}  className="lg:max-w-md md:max-w-sm max-w-xs rounded-lg shadow-2xl" alt="kazi rauf elahi about us image" />
             <div>
               <div>
-                <h1 className="lg:text-2xl md:text-2xl text-[16px] font-bold text-[#f6136e] ">
+                <h1 className="lg:text-2xl md:text-2xl text-lg font-bold text-[#f6136e] ">
                   🚀{" "}
                   <span className="gradient-text-a ">
                     Driven Full Stack Web Developer
@@ -34,9 +34,9 @@ const AboutUs = () => {
                   to the success of innovative web development projects.
                 </p>
 
-                <div className="mt-5 flex gap-x-5 items-center">
+                <div className="mt-5 flex gap-x-4 items-center">
               <a
-                href="https://bd.linkedin.com/in/kazi-rauf-elahi-a47a78250"
+                href="https://www.linkedin.com/in/kazi-rauf-elahi9876/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

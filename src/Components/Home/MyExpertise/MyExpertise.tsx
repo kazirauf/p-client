@@ -16,8 +16,8 @@ const MyExpertise = async() => {
      data-aos-easing="ease-in-sine"
      data-aos-duration="1000" className="2xl:text-5xl lg:text-4xl font-bold text-white 2xl:mb-20 lg:mb-10  2xl:ml-20 lg:ml-3 md:text-3xl md:mb-10 md:ml-5 text-2xl pt-36 ml-5">MY <span className="text-[#f6136e]">EXPERTISE</span></h1> 
       
-       <div data-aos="flip-up"
-     className=" flex justify-center 2xl:pt-0 lg:pt-0 md:pt-0  pt-20">
+       <div 
+     className=" flex justify-center 2xl:pt-0 lg:pt-0 md:pt-0  pt-20 md:mx-10">
        <div className=" 2xl:flex lg:flex md:flex md:flex-wrap  justify-center 2xl:gap-20 lg:gap-5 md:gap-5 2xl:mr-20">
    <div className="card  bg-zinc-800 text-neutral-content text-white shadow-2xl 2xl:w-80 lg:w-80 md:w-80 w-80 rounded-md mb-4">
   <div className="card-body p-7">

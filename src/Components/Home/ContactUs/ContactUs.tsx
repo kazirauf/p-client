@@ -3,6 +3,9 @@
 import Image from "next/image";
 import Swal from "sweetalert2";
 import img from "../../../assets/image/WhatsApp Image 2024-01-06 at 15.07.57_29555a67-fotor-bg-remover-2024060902512.png";
+import imge from "../../../assets/email.png";
+import imgp from "../../../assets/phone-call.png";
+import imgh from "../../../assets/home (1).png";
 const ContactUs = () => {
    
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
@@ -53,7 +56,7 @@ const ContactUs = () => {
                 data-aos-offset="500"
                 data-aos-easing="ease-in-sine"
                 data-aos-duration="1000"
-                className="2xl:text-5xl lg:text-4xl font-bold text-white 2xl:mb-20 lg:mb-10 2xl:ml-20 lg:ml-16 md:text-3xl md:mb-10 md:ml-5 text-3xl pt-36 ml-5"
+                className="2xl:text-5xl lg:text-4xl font-bold text-white 2xl:mb-20 lg:mb-10 2xl:ml-20 lg:ml-16 md:text-3xl md:mb-10 md:ml-5 text-2xl pt-36 ml-5"
             >
                 CONTACT <span className="text-[#f6136e]">ME</span>
             </h1>
@@ -61,9 +64,11 @@ const ContactUs = () => {
             <div className="flex justify-center">
                 <div className="flex flex-col md:flex-row items-center 2xl::ml-52 text-white p-6">
                     <div className="md:w-1/2 p-4">
-                        <Image width={1000} height={1000} src={img} alt="Profile" className="rounded-md max-w-sm" />
+                        <Image width={1000} height={1000} src={img} alt="Profile" className="rounded-md lg:max-w-sm md:max-w-sm max-w-xs lg:mx-0 md:mx-0 mx-20" />
                     </div>
-                    <div className="md:w-1/2 p-4">
+        
+                    <div className=" p-4 lg:mx-0 md:mx-0 mx-20">
+               
                         <form  onSubmit={handleSubmit} className="space-y-4">
                             <input
                                 type="text"
@@ -88,6 +93,25 @@ const ContactUs = () => {
                                 value="Send"
                             />
                         </form>
+                        <div className="flex justify-center items-center flex-wrap  mt-10 gap-5">
+                      
+                      <div className="flex justify-center  items-center gap-3 flex-col border-r-2 pr-5" >
+                      <Image className="w-10 mr-4" src={imge} alt="email icon" width={1000} height={1000}/>
+                      <h3 className="font-bold text-base">raufelahi9876@gmail.com</h3>
+                      
+                      </div>
+                      <div className="flex justify-center  items-center gap-3 flex-col border-r-2 pr-5" >
+                      <Image className="w-10 mr-4" src={imgp} alt="email icon" width={1000} height={1000}/>
+                      <h3 className="font-bold text-base">+8801404555331</h3>
+                      
+                      </div>
+                      <div className="flex justify-center  items-center gap-3 flex-col " >
+                      <Image className="w-10 mr-4" src={imgh} alt="email icon" width={1000} height={1000}/>
+                      <h3 className="font-bold text-base">Rajshahi, Bangladesh</h3>
+                      
+                      </div>
+                     
+                   </div>
                     </div>
                 </div>
             </div>

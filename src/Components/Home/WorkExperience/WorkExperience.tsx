@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './WrokExperience.css'; // Ensure correct file path
 
+
 interface Experience {
   _id: string;
   address: string;
@@ -73,7 +74,8 @@ const WorkExperience = () => {
         className="2xl:text-5xl lg:text-4xl font-bold text-white 2xl:mb-20 lg:mb-10 2xl:ml-20 lg:ml-3 md:text-3xl md:mb-10 md:ml-5 text-2xl pt-36 ml-5">
         Work <span className="text-[#f6136e]">Experience</span>
       </h1>
-      <section className="timeline flex justify-center">
+    <div className=' lg:flex md:flex justify-center hidden'>
+    <section className="timeline flex justify-center">
         <ul>
           {experienceData.map((experience) => (
             <li key={experience._id}>
@@ -86,7 +88,26 @@ const WorkExperience = () => {
               </div>
             </li>
           ))}
+          
         </ul>
+      </section>
+    </div>
+      <section className='flex justify-center lg:hidden md:hidden flex mt-10'>
+    <div>
+    {experienceData.map((experience) => (
+          <div key={experience._id} className="card  bg-zinc-800 text-neutral-content text-white shadow-2xl 2xl:w-80 lg:w-80 md:w-80 w-80 rounded-md mb-4">
+          <div className="card-body p-7">
+            
+            <h2 className="card-title text-lg font-bold mb-1 text-white">{experience.title}</h2>
+            <h2 className="card-title text-lg font-bold  ">{experience.company}</h2>
+            <h2 className="card-title text-lg font-bold text-[#f6136e] ">{experience.date}</h2>
+            <h2 className="card title text-sm font-bold  ">{experience.address}</h2>
+            <p>With two years of experience, I specialize in creating dynamic <br /> and visually captivating websites. <br /> My Full Stack expertise allows <br /> me to deliver cutting-edge, highly functional web solutions. I bring creative precision and adaptability <br /> to ensure your project stands out <br /> in the digital landscape.</p>
+           
+          </div>
+        </div>
+          ))}
+    </div>
       </section>
     </div>
   );

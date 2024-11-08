@@ -14,6 +14,7 @@ import loading from '../assets/image/img/loading.gif'
 import { Link } from 'react-scroll';
 import { Suspense } from "react";
 import Image from "next/image";
+import Login from "@/Components/Home/Banner/Login";
 export default function Home() {
   const styles = {
     bmBurgerButton: {
@@ -94,6 +95,7 @@ export default function Home() {
         <Link to="contact" className="menu-item text-center text-[#c32865] font-bold mb-2" smooth={true} duration={500}>
           Contact Me
         </Link>
+        <Login></Login>
        
    
       </Menu>

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import cone from '../../../assets/image/cone.png';
-import torus from '../../../assets/image/torus.png';
-import icosahedron from '../../../assets/image/icosahedron.png';
-import sphere from '../../../assets/image/sphere.png';
+// import cone from '../../../assets/image/cone.png';
+// import torus from '../../../assets/image/torus.png';
+// import icosahedron from '../../../assets/image/icosahedron.png';
+// import sphere from '../../../assets/image/sphere.png';
 import './Project.css';
 
 type Project = {
@@ -63,7 +63,7 @@ const Projects = () => {
 
         <div className='flex justify-center mt-10'>
           <div className='bg-[#1c1c1c] min-h-screen'>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 md:mx-10">
               {projects.map((project) => (
                 <article key={project.projectname} className="card__article">
                   <Image
@@ -76,7 +76,7 @@ const Projects = () => {
                   <div className="card__data">
                     <h2 className="card__title font-bold">{project.projectname}</h2>
                     <div className='mb-3 flex items-center gap-5'>
-                      <a
+                      {/* <a
                         href={project.liveurl}
                         target='_blank'
                         rel="noopener noreferrer"
@@ -87,6 +87,14 @@ const Projects = () => {
                         <Image width={1000} height={1000} src={torus} alt="torus" className="button__torus" />
                         <Image width={1000} height={1000} src={icosahedron} alt="icosahedron" className="button__icosahedron" />
                         <Image width={1000} height={1000} src={sphere} alt="sphere" className="button__sphere" />
+                      </a> */}
+                      <a
+                        href={project.liveurl}
+                        target='_blank'
+                        rel="noopener noreferrer"
+                    className='py-3 px-5 bg-[#f6136e] text-xs flex items-center gap-3 text-white font-semibold  rounded-lg'
+                      >
+                       Live Site
                       </a>
                       <a href={project.clientsidelink} target="_blank" rel="noopener noreferrer">
                         <Image
@@ -122,23 +130,31 @@ const Projects = () => {
                 ))}
               </div>
               <h3 className="font-bold text-lg mt-5">Watch The Code And Live Site</h3>
-              <div className='flex gap-5 mt-2'>
-                <a href={selectedProject.liveurl} target='_blank' className="button py-2 px-4 rounded text-xs">
+              <div className='flex flex-wrap justify-center gap-5 mt-2'>
+                {/* <a href={selectedProject.liveurl} target='_blank' className="button py-2 px-4 rounded text-xs">
                   <span className="button__text items-center">Live Site</span>
                   <Image width={1000} height={1000} src={cone} alt="cone" className="button__cone" />
                   <Image width={1000} height={1000} src={torus} alt="torus" className="button__torus" />
                   <Image width={1000} height={1000} src={icosahedron} alt="icosahedron" className="button__icosahedron" />
                   <Image width={1000} height={1000} src={sphere} alt="sphere" className="button__sphere" />
-                </a>
+                </a> */}
+                 <a
+                        href={selectedProject.liveurl}
+                        target='_blank'
+                        rel="noopener noreferrer"
+                    className='py-3 px-5 bg-[#f6136e] text-xs flex items-center gap-3 text-white font-semibold  rounded-lg'
+                      >
+                       Live Site
+                      </a>
                 <a href={selectedProject.clientsidelink} target="_blank" rel="">
                   <button className='py-1 px-3 bg-[#f6136e] text-xs flex items-center gap-3 text-white font-semibold rounded-lg'>
-                    <h1 className="text-xs ">Client Side</h1>
+                    <h1 className="text-sm ">Client Side</h1>
                     <Image width={1000} height={1000} className='w-10' src="https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/github-512.png" alt="GitHub" />
                   </button>
                 </a>
                 <a href={selectedProject.serversidelink} target="_blank" rel="">
                   <button className='py-1 px-3 bg-[#f6136e] text-xs flex items-center gap-3 text-white font-semibold  rounded-lg'>
-                    <h1  className="text-xs ">Server Side</h1>
+                    <h1  className="text-sm ">Server Side</h1>
                     <Image width={1000} height={1000} className='w-10' src="https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/github-512.png" alt="GitHub" />
                   </button>
                 </a>

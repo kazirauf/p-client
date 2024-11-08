@@ -11,7 +11,7 @@ const MyAchievement = () => {
      <h1 data-aos="fade-right"
      data-aos-offset="500"
      data-aos-easing="ease-in-sine"
-     data-aos-duration="1000" className="2xl:text-5xl lg:text-4xl font-bold text-white 2xl:mb-20 lg:mb-10  2xl:ml-20 lg:ml-3 md:text-3xl md:mb-10 md:ml-5 text-2xl pt-36 ml-5">MY <span className="text-[#f6136e]">ACHIEVEMENTS</span></h1>
+     data-aos-duration="1000" className="2xl:text-5xl lg:text-4xl font-bold text-white 2xl:mb-20 lg:mb-10  2xl:ml-20 lg:ml-3 md:text-3xl md:mb-10 md:ml-10 text-2xl mb-10 pt-36 ml-5">MY <span className="text-[#f6136e]">ACHIEVEMENTS</span></h1>
        <div className="flex flex-wrap justify-center gap-7 w-[90%] mx-auto">
       <div className="relative lg:w-[480px] lg:h-[360px] md:w-[280px] md:h-[210px] w-[300px] h-[230px] bg-white flex items-end p-8 transition-all duration-500 ease-in-out hover:translate-y-[-10px]">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[rgba(13,36,63,0.3)] to-[rgba(13,36,63,1)] z-10 opacity-0 transition-opacity duration-500 ease-in-out hover:opacity-100"></div>

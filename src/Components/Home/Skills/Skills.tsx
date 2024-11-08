@@ -44,7 +44,7 @@ const Skills = () => {
                 >
                     MY <span className="text-[#f6136e]">SKILLS</span>
                 </h1>
-                <div className="banner">
+                {/* <div className="banner">
                     <div 
                         className="slider" 
                         style={{ '--quantity': skills.length } as React.CSSProperties}
@@ -79,6 +79,15 @@ const Skills = () => {
                         </div>
                         <div className="model"></div>
                     </div>
+                </div> */}
+                <div className="flex justify-center flex-wrap items-center gap-10">
+                {skills.map((skill) => (
+                               <div key={skill._id} className="flex flex-col justify-center items-center gap-3 border-2 border-gray-500 rounded w-52 p-5">
+                               <Image className="w-24 h-24 " src={skill.skillurl} alt="css" width={1000} height={1000}/>
+                               <h3 className="font-medium text-xl text-[#f6136e]">{skill.skillname}</h3>
+                           </div>
+                        ))}
+                
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
-
+"use client"
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface Blog {
@@ -10,19 +11,9 @@ interface Blog {
 }
 
 const MyBlogs = () => {
-  const [isOpen, setIsOpen] = useState(false);
+
   const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [selectedBlog, setSelectedBlog] = useState<Blog | null>(null);
 
-  const openModal = (blog: Blog) => {
-    setSelectedBlog(blog);
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-    setSelectedBlog(null);
-  };
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -50,7 +41,7 @@ const MyBlogs = () => {
         </h1>
 
         <div
-          data-aos="flip-up"
+        
           className="flex justify-center 2xl:pt-0 lg:pt-0 md:pt-0 pt-20"
         >
           <div className="2xl:flex lg:flex md:flex md:flex-wrap justify-center 2xl:gap-20 lg:gap-5 md:gap-5 2xl:mr-20">
@@ -71,12 +62,12 @@ const MyBlogs = () => {
                     {blog.blogtitle}
                   </h2>
                   <p>{blog.content.slice(0, 100)}...</p>
-                  <button
-                    onClick={() => openModal(blog)}
+                  <Link
+                    href={`/myblogs/${blog._id}`}
                     className="text-white bg-[#f6136e] py-2 hover:rotate-2 w-full"
                   >
                     Read More
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -84,27 +75,7 @@ const MyBlogs = () => {
         </div>
       </section>
 
-      {isOpen && selectedBlog && (
-        <dialog
-          id="my_modal_5"
-          className="modal modal-bottom 2xl:modal-top sm:modal-middle bg-[#1c1c1c]"
-          open
-        >
-          <div className="modal-box bg-[#1c1c1c] border-2 border-[#f6136e]">
-            <h3 className="font-bold text-lg">{selectedBlog.blogtitle}</h3>
-            <p className="py-4">{selectedBlog.content}</p>
-            <div className="modal-action">
-              <button
-                type="button"
-                className="content-small-d py-3 px-6 font-bold text-lg rounded bg-[#c32865] hover:py-4 hover:px-7 hover:rotate-12 mt-5 lg:ml-7 md:ml-7 text-white flex items-center gap-3"
-                onClick={closeModal}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </dialog>
-      )}
+  
     </div>
   );
 };

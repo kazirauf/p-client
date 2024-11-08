@@ -8,6 +8,10 @@ import project from "../../assets/file-managament.png";
 import job from "../../assets/portfolio.png";
 import blog from "../../assets/blog.png";
 import 'react-quill/dist/quill.snow.css';
+import DashboardSkill from "./DashboardSkill";
+import DashboardProjects from "./DashboardProjects";
+import DashboardExpertise from "./DashboardExpertise";
+import DashboardBlog from "./DashboardBlog";
 interface BlogFormData {
   blogtitle: string;
   blogurl: string;
@@ -289,6 +293,10 @@ const Page = () => {
         </button>
       </div>
 
+      <DashboardSkill/>
+      <DashboardProjects />
+      <DashboardExpertise/>
+      <DashboardBlog/>
       {/* Modals */}
       <dialog ref={modalRef1} id="my_modal_1" className="modal">
         <div className="modal-box">
